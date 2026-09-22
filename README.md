@@ -287,65 +287,6 @@ const api = axios.create({
 export default api;
 ```
 
-### Login com Axios
-
-```javascript
-const response = await api.post("/auth/login", {
-  email,
-  password
-});
-
-const token = response.data.data.token;
-
-localStorage.setItem("token", token);
-```
-
-### Axios interceptor
-
-```javascript
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-
-  return config;
-});
-```
-
-### Listar filmes
-
-```javascript
-const response = await api.get("/movies");
-
-console.log(response.data.data);
-```
-
-### Tratamento de erros
-
-```javascript
-try {
-  const response = await api.get("/movies");
-} catch (error) {
-  console.error(
-    error.response?.data?.message || "Erro ao carregar filmes"
-  );
-}
-```
-
-### Loading
-
-```javascript
-setLoading(true);
-
-try {
-  await api.get("/movies");
-} finally {
-  setLoading(false);
-}
-```
-
 ## Sugestões de páginas frontend
 
 | Página | Objetivo |
@@ -427,4 +368,4 @@ Authorization: Bearer TOKEN
 
 MIT
 
-João Pedro L.Reis | Diretor de Projetos 2026/2
+João Pedro L. Reis | Diretor de Projetos 2026/2
