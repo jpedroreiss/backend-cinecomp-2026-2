@@ -74,7 +74,7 @@ PaczinBalaTensa000-
 O banco fica em:
 
 ```text
-database/cinevault.sqlite
+database/cinecomp.sqlite
 ```
 
 Ele é criado automaticamente, fica dentro do projeto e não exige servidor externo.
