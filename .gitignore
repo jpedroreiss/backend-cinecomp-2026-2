@@ -1,0 +1,7 @@
+node_modules/
+.env
+database/cinecomp.sqlite
+database/*.sqlite
+database/*.sqlite-journal
+database/*.sqlite-wal
+database/*.sqlite-shm
